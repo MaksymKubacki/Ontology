@@ -1,0 +1,1056 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-4="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maksym Kubacki i Jakub Murzyn</rdfs:isDefinedBy>
+        <rdfs:label>Ontologia opisująca zespół muzyczny</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v 1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#belongsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#cooperateWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#cooperateWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasManager -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasManager">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#isMadeBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#isMadeBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#isManagedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#isManagedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technicians"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#isProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#isProducedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#knows -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#knows">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technicians"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#playsOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#playsOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#wrote -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#wrote">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Songs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasContacts -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasContacts"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasEqiupment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasEqiupment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasFirstName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasLastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasLastName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasPrice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasSalary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasSalary"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasSkils -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasSkils"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasStudio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasStudio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#hasText"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#ManagerKnowsSomeTechnicians -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#ManagerKnowsSomeTechnicians">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#knows"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technicians"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDiscWasProducedByExactly1Producer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDiscWasProducedByExactly1Producer">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#isProducedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusiciansBelongsToMin1Band -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusiciansBelongsToMin1Band">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#belongsTo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusiciansPlaysOnMin1Instrument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusiciansPlaysOnMin1Instrument">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#playsOn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Piano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Piano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PianoPlayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PianoPlayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#ProducerPlaysOnSomeInstruments -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#ProducerPlaysOnSomeInstruments">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#playsOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Songs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Songs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technicians -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technicians">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band"/>
+        <hasManager rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akcent</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band"/>
+        <hasManager rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager2"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bayer Full</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band"/>
+        <hasManager rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cygańska riksza</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ibanez</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3000</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer2"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4500</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass1"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balzary</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays Bass</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass2"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deacon</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays Bass</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pearl</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10000</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer2"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polmuz</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6000</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer1"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer1"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums1"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomas</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haake</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">45000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays drums</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums2"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neil</hasFirstName>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peart</hasFirstName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays drums</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3000</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer2"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamaha</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2500</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer3"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayones</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer3"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibson</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4500</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer1"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer1"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar1"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryszard</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sygitowicz</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plasy guitar very well</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar2"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stive</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vai</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">250000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays guitar</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar4"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satriani</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">250000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays guitar</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technician1"/>
+        <hasContacts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marketing</hasContacts>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacek</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fafiniak</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technician2"/>
+        <hasContacts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mafia</hasContacts>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Misza</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trepolovic</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50000</hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audix</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal2"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rode</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">250</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polskie przeboje disco</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer2"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disco ponad wszystko</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PIanoPlayer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PIanoPlayer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PianoPlayer"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Piano1"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryszard</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warot</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays piano</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Piano1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Piano1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Piano"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PianoPlayer1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamaha</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10000</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PianoPlayer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PianoPlayer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PianoPlayer"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer1"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer1"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal1"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Piano1"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Władysław</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Szpilman</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays piano</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+        <cooperateWith rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band1"/>
+        <cooperateWith rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band2"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ostrowski</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000000</hasSalary>
+        <hasStudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio 51</hasStudio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+        <cooperateWith rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band3"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaworski</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</hasSalary>
+        <hasStudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio DJ Adamus</hasStudio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar1"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacek</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Łyżyński</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays guitar</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar2"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryszard</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matuszczyk</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays guitar</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar3"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dariusz</hasFirstName>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kozakiewicz</hasFirstName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays guitar</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Songs"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciumbalala</hasName>
+        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciumbalala lala rikitiki tak</hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Songs"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer2"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oczy zielone</hasName>
+        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Przez Twe oczy zielone oszalałem</hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Songs"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer1"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ona czuje we mnie piniądz</hasName>
+        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ona czuje we mnie piniądz wystoiła się jak Beyonce</hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Songs"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer2"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Życie to są chwile</hasName>
+        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">życie to są chwile, chwile
+tak ulotne, jak motyle</hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technician1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technician1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technicians"/>
+        <isManagedBy rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager1"/>
+        <hasEqiupment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speakers</hasEqiupment>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mieczysław</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boberek</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technician2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technician2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technicians"/>
+        <isManagedBy rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager2"/>
+        <hasEqiupment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wires</hasEqiupment>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grzegorz</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brzęczyszczykiewicz</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technician3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technician3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technicians"/>
+        <hasEqiupment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</hasEqiupment>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Janusz</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bury</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter"/>
+        <wrote rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song1"/>
+        <wrote rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song4"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bartosz</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kowalczuk</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can write</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter"/>
+        <wrote rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song2"/>
+        <wrote rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Song3"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roman</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iwańczuk</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can write</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer1"/>
+        <knows rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager1"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone1"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sławomir</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Świerzyński</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can&apos;t sing</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal"/>
+        <playsOn rdf:resource="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone2"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zenon</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martyniuk</hasLastName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50000</hasSalary>
+        <hasSkils rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can&apos;t sing</hasSkils>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Band"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Instruments"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#MusicDisc"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Musicians"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Songs"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Stuff"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#TextWritter"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Bass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Drums"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Guitar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Microphone"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Piano"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#BassPlayer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#DrumsPlayer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#GuitarPlayer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#PianoPlayer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#RythmGuitarPlayer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Vocal"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Manager"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Producer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/maks/ontologies/2020/4/untitled-ontology-4#Technicians"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
